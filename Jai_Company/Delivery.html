@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link class="icon" rel ="icon" sizes="64x64" type="image/png" href="/Jai_Company/icon.png">
+
+    <title>Contact Us</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script src="Delivery.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("EbGZMiDhevBPgnrlI");
+   })();
+</script>
+  </head>
+
+  <style>
+
+   
+    
+    .container {
+      
+      box-shadow: 0 1px 6px 0 rgb(32 33 36 / 10%);
+      position: absolute;
+      left: 12%;
+      bottom: 20%;
+
+      -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 3s;
+    animation-duration: 1.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    }
+    @keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+
+    }
+
+    .container h1 {
+      font-family:'Courier New', Courier, monospace ;
+    }
+
+    .container h5 {
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .logo {
+      width: 200px;
+     
+  }
+  
+  nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+      height: 100px;
+      box-shadow: 0 1px 6px 0 rgb(32 33 36 / 10%);
+  }
+  
+  nav ul li:hover {
+     
+     transform: scale(1.15);
+     border-radius: 20px;
+     transition: all .50s ease;
+  }
+  
+  nav ul li a:hover {
+      color: gray;
+  }
+  
+  
+  nav ul li {
+      margin: 10px 30px;
+      list-style: none;
+      display: inline-block;
+  }
+  
+  nav ul li a {
+      color: black;
+      text-decoration: none;
+      font-family: Helvetica;
+      border-radius:20px;
+      
+  
+  }
+
+  body {
+    background-color:hsla(127, 79%, 27%, 0.412); ;
+  }
+
+  img {
+    width: 100px;
+  }
+    
+
+  </style>
+
+
+  <header>
+    <nav>
+      
+      <ul>
+         <li><a href="/Jai_Company/index.html">Home</a></li>
+          <li><a href="/Jai_Company/contact.html">Contact</a></li>
+          <li><a href="/Jai_Company/career.html">Career</a></li>
+          <li><a href="/Jai_Company//Delivery.html">Delivery</a></li>
+      </ul>
+   </nav> 
+   </header>
+
+
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 p-5 bg-primary text-white">
+          <h1>Get in touch</h1>
+          <hr>
+          <br>
+          <h6>
+            <h4>Email:</h4> jaicompany6@gmail.com
+          <h6>
+          <h6>
+            <h4>Contact Number:</h4> 094575419870
+          </h6>
+          <br>
+          <h6>
+            <h4>Address:</h4> 624 Re624 Recto Ave, Tondo, Manila, 1001 Metro Manila
+          </h6>
+        </div>
+        <div class="col-md-6 border-left py-3">
+          <h1>Contact form <img src="/Jai_Company/jai2.png"></h1>
+          <div class="form-group">
+            <h5 for="name">Name</h5>  
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Enter name"
+            />
+          </div>
+          <div class="form-group">
+            <h5 for="email" >Email</h5>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter email"
+            />
+          </div>
+          <div class="form-group">
+            <h5 for="message">Message</h5>
+            <textarea class="form-control" id="message" rows="3"></textarea>
+          </div>
+          <button class="btn btn-primary" onclick="sendMail()">Submit</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

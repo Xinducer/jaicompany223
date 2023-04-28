@@ -1,0 +1,13 @@
+.shape {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    clip-path: polygon(50% 0%, 100% 50%,50% 100%, 0% 50%);
+}
+
+.shape2 {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    clip-path: polygon(50% 90%, 100% 50%,50% 150%, 30% 30%);
+}

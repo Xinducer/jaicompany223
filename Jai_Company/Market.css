@@ -8,12 +8,18 @@
     scroll-behavior: smooth;
 }
 
+li {
+    width:100%;
+  }
+
 :root{
-    --bg-color:rgba(147, 146, 146, 0.356);
+    --bg-color:hsla(127, 79%, 27%, 0.412);
+    --nav-color:rgba(53, 49, 49, 0.388);
     --main-color: #309f486f;
     --text-color: #010101;
     --2nd-color: #000000;
-    --3rd-color:rgb(111, 182, 112);
+    --3rd-color:rgb(59, 134, 60);
+    --4th-color:rgba(98, 86, 81, 0.575);
     --big-font: 3rem;
     --h2-font: 2.3rem;
     --p-font: 1.9rem; 
@@ -21,7 +27,7 @@
 
 body {
     color: var(--text-color);
-    background: var(--bg-color);
+    background: hsla(127, 79%, 27%, 0.412);
 }
 
 header {
@@ -30,17 +36,18 @@ header {
     top: 0;
     right: 0;
     z-index: 1000;
-    background: var(--bg-color);
+    background: transparent;
     box-shadow: 0 1px 6px 0 rgb(32 33 36 / 10%);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 14%;
     transition: all .50s ease;
+    height: 120px;
 }
 
-.logo img {
-    width: 200px;
+header .logo img {
+    width: 185px;
     height: auto;
 }
 
@@ -62,39 +69,6 @@ header {
     color: white;
 }
 
-.h-icons {
-     display: flex;
-     align-items: center;
-}
-
-.h-icons i {
-    font-size: 25px;
-    color:var(--text-color);
-    margin-left: 5px;
-    margin-right: 20px;
-    transition: all .50s ease;
-}
-
-.h-icons i:hover {
-    transform: translateY(-4px);
-    color:white;
-}
-
-#menu-icon{
-    height: 30px;
-    width: 30px;
-    background: var(--other-color);
-    color: var(--bg-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    border-radius: 50%;
-    z-index: 10001;
-    cursor: pointer;
-    display: none;
-}
-
 section {
     padding: 60px 14% 70px;
 }
@@ -103,12 +77,16 @@ section {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url(/Jai_Company/bgImage.png);
+    background-color: rgba(255, 255, 255, 0.522);
+    background-position: center;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    background-image: url(/Jai_Company/bagongbg.png);
+    
 }
+
 
 .home-text h1 {
     font-family: 'Nunito', sans-serif;
@@ -116,7 +94,30 @@ section {
     color: var(--2nd-color);
     line-height: 1.3;
     margin-bottom: 25px;
+    transition: 1s;
+
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    }
+    @keyframes fadeIn {
+    0% {opacity: 0;}
+    100%
+
 }
+
+.home img {
+    width:350px;
+    padding-top: 30%;
+}
+
 
 .home-text p {
 
@@ -125,12 +126,57 @@ section {
     line-height: 33px;
     margin-bottom: 60px;
 
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    }
+    @keyframes fadeIn {
+    0% {opacity: 0;}
+    100%    
+
 }
 
 .btn{
     color: black;
     transition: all .50 ease;
     background-color: rgba(5, 51, 5, 0.271);
+
+       -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes slideInLeft {
+  0% {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  visibility: visible;
+  }
+  100% {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+  }
+  @keyframes slideInLeft {
+  0% {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  visibility: visible;
+  }
+  100% {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+
 }
 
 .btn:link,
@@ -183,10 +229,11 @@ section {
 
 .banner {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+    grid-template-columns: repeat(auto-fit,minmax(350px,auto));
     align-items: center;
     gap: 2.5rem;
-    background-image: url(/Jai_Company/bgImage.png);
+    
+    
 }
 
 .banner-img{
@@ -207,6 +254,271 @@ section {
 .center-text h2{
     text-align: center;
     font-size: var(--h2-font);
-    font-weight: 800;
+    font-weight: 600;
     color: var(--text-color);
+    font-family:'Courier New', Courier, monospace;
+    clip-path: inset(0 100% 0 0);
+  animation:c5 2s steps(11) infinite;
 }
+
+@keyframes c5 {to{clip-path: inset(0 1ch 0 0)}}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+    align-items: center;
+    gap: 6rem;
+    padding: 0;
+    margin: 0px;
+    margin-top: 4.5rem;
+    text-align: center;
+}
+
+.row {
+    position: relative;
+    cursor: pointer;
+    gap: 300px;
+}
+
+.row img  {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 15px;
+    padding: 0;
+
+    -webkit-border-radius: 30px 30px 30px 30px;
+border-radius: 40px 40px 40px 40px;
+
+}
+
+.row h4{
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: 400;
+    transition: all .50s ease;
+}
+
+.row h5 {
+    color: var(--other-color);
+    cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+.top {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    height: 30px;
+    width: 50px;
+    color: var(--bg-color);
+    background: salmon;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row .bbtn a {
+    position: absolute;
+    bottom: 65px;
+    left:0;
+    right: 0;
+    padding: 20px;
+    background-color: rgba(60, 56, 56, 0.175);
+    color:rgb(231, 231, 231);
+    transition: opacity 0.5s;
+    opacity: 0;
+}
+
+.row:hover .bbtn a {
+    opacity: 1;
+}
+
+.wrapper{
+    max-width: 75%;
+    margin: auto;
+} 
+.wrapper > h1 {
+margin: 1.5rem 0;
+text-align: center;
+font-family:'Courier New', Courier, monospace
+}
+.wrapper > h1 {
+    letter-spacing: 3px;
+}
+.accordion{
+background-color: white;
+color: rgba(0, 0, 0, 0.8);
+cursor: pointer;
+font-size: 1.2rem;
+height: 100%;
+width: 100%;
+padding: 2rem 2.5rem;
+border: none;
+transition: 0.4s;
+display: cover;
+justify-content: space-between;
+align-items: auto;
+font-weight: bold;
+font-family: 'Courier New', Courier, monospace;
+
+-webkit-border-radius: 20px 20px 20px 20px;
+border-radius: 20px 20px 20px 20px;
+
+}
+.accordion i {
+    font-size: 1.6rem;
+}
+
+
+.accordion:hover{
+    transform: scale(1.1);
+}
+.pannel{
+    padding: 0 2rem 2.5rem 2rem;
+    background-color: whitesmoke;
+    overflow: hidden;
+    background-color: #f1f7f5;
+    display: none;
+    text-align: center;
+
+    -webkit-border-radius: 20px 20px 20px 20px;
+    border-radius: 20px 20px 20px 20px;
+
+}
+
+
+
+.pannel p{
+    color: rgba(0, 0, 0, 0.)7;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+.faq{
+    border: 1px solid rgba(0, 0, 0, 0,2);
+    margin: 10px 0;
+}
+.faq.active{
+    border:none;
+}
+
+@media(max-width: 1200px) {
+    header {
+        padding: 12px 3%;
+    }
+    section {
+        padding: 40px 3% 50px;
+    }
+
+}
+
+@media (max-width:640px) and (max-width: 920px) {
+
+    .banner img {
+        width: 600px;
+    }
+
+    :root{
+        --big-font: 3.8rem;
+        --h2-font: 2rem;
+        --p-font: 1.1rem;
+    }
+
+    .home-text h1 {
+        line-height: 1.1;
+        font-size: 20px;
+        
+    }
+    .home {
+        height: 85vh;
+        background-size: 10000%;
+        background-image: url(/Jai_Company/coloredpicture.png);
+    }
+
+    
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 10px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        background: none;
+        transition: all .50s ease;
+    }
+
+    .navbar a {
+        display: block;
+        color: rgb(12, 2, 2);
+        padding: 5px;
+        margin: 15px;
+        font-size: 13px;
+        font-weight: 600;
+        transition: all .50s ease;
+    }
+
+    .navbar a:hover {
+        color: white;
+    }
+
+    .navbar.active {
+        top: 100%;
+    }
+
+    .logo img {
+        width: 100px;
+        height: auto;
+    }
+    
+    .top {
+        position: absolute;
+        top: 20px;
+        left: 20%;
+        height: 30px;
+        width: 50px;
+        color: var(--bg-color);
+        background: salmon;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+        align-items: center;
+        gap: 6rem;
+        padding: 0;
+        margin: 0px;
+        margin-top: 4.5rem;
+        text-align: center;
+    }
+
+    .row .bbtn a {
+        position: absolute;
+        bottom: 65px;
+        left:0;
+        right: 0;
+        padding: 5px;
+        text-align: center;
+        background-color: transparent;
+        color:whitesmoke;
+        transition: opacity 0.5s;
+        opacity: 0;
+    }
+
+
+}
+

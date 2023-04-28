@@ -1,0 +1,179 @@
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    transition: all .50s ease;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    background-color:hsla(127, 79%, 27%, 0.412) ;
+}
+
+.logo {
+    width: 200px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    height: 100px;
+    box-shadow: 0 1px 6px 0 rgb(32 33 36 / 10%);
+}
+
+nav ul li:hover {
+   
+   transform: scale(1.15);
+   border-radius: 20px;
+   transition: all .50s ease;
+}
+
+nav ul li a:hover {
+    color: gray;
+}
+
+
+nav ul li {
+    margin: 10px 30px;
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-family: Helvetica;
+    border-radius:20px;
+    float: center;
+
+}
+
+
+.image img {
+    width: 500px;
+
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes slideInLeft {
+    0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    visibility: visible;
+    }
+    100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    }
+    }
+    @keyframes slideInLeft {
+    0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    visibility: visible;
+    }
+    100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    }
+    
+}
+
+.title h1 {
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+}
+
+.title p {
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: 200;
+    font-size: 30px;
+
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    }
+    @keyframes fadeIn {
+    0% {opacity: 0;}
+    100%
+
+}
+
+
+
+  @media (max-width:640px) and (max-width: 920px) {
+
+    body {
+        background:rgba(7, 247, 7, 0.37);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .title h1 {
+        font-size: 40px;
+    }  
+
+  .title p {
+    font-size: 15px;
+  }
+
+  .image img {
+    width: 300px;
+   
+}
+
+nav {
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+    padding: 20px 0;
+    height: 100px;
+}
+
+nav ul li:hover {
+   
+   transform: scale(1.15);
+   border-radius: 20px;
+   transition: all .50s ease;
+}
+
+nav ul li a:hover {
+    color: gray;
+}
+
+
+nav ul li {
+    margin: 10px 30px;
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li a {
+    color: #030303;
+    text-decoration: none;
+    font-family: Helvetica;
+    border-radius:20px;
+    font-size: 15px;
+    text-align:  center;
+}
+
+  }
+
